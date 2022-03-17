@@ -1,0 +1,13 @@
+
+<h1>{{ titulo }}</h1>
+
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/heroes">Heroes</a>
+</nav>
+
+<!-- <app-heroes></app-heroes>         Esta etiqueta muestra el contenido del componente "heroes" -->
+
+<router-outlet></router-outlet>       <!-- Se sustituye  "<app-heroes></app-heroes>" por "<router-outlet></router-outlet>" para que aparezca el listado de heroes cuando accedemos a la ruta-->
+
+<app-messages></app-messages>         <!-- Se muestran mensajes -->

@@ -1,0 +1,33 @@
+
+<h2>My Heroes</h2>
+
+<ul class="heroes">
+    <li *ngFor="let hero of heroes">
+      <a routerLink="/detail/{{hero.id}}">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+      </a>
+      <button class="delete" title="delete hero"
+          (click)="delete(hero)">X</button>
+    </li>
+</ul>
+
+<div>
+  <label>Hero name:
+    <input #heroName />
+  </label>
+  <!-- Añado un heroe al pulsar el botón y limpio el "input" -->
+  <button (click)="add(heroName.value); heroName.value=''">
+    add
+  </button>
+</div>
+
+<!-- <ul class="heroes">
+    <li *ngFor="let hero of heroes">
+        <button type="button" (click)="mostrar(hero)" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">         
+            <span class="badge">{{hero.id}}</span>                                                      <!-- Cuando la fila actual del héroe es la misma que la del seleccionado,-->
+            <!-- <span>{{hero.name}}</span>                                                                  <!-- se aplica la clase "selected" de CSS -->
+        <!-- </button>
+    </li>
+</ul> -->
+
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
